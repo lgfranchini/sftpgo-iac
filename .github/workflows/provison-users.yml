@@ -1,0 +1,28 @@
+name: Provision SFTPGo Users
+
+on:
+  workflow_dispatch:   # Permet de lancer manuellement
+  push:
+    paths:
+      - "config/users.json"   # Lance le workflow si users.json change
+
+jobs:
+  provision:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PowerShell
+        uses: PowerShell/PowerShell-For-GitHub-Actions@v1
+
+      - name: Run Provision Script
+        shell: pwsh
+        run: |
+          cd scripts
+          ./Provision-SFTPGoUsers.ps1 `
+            -Endpoint "${{ secrets.SFTPGO_ENDPOINT }}" `
+            -AdminUser "${{ secrets.SFTPGO_ADMIN_USER }}" `
+            -AdminPassword "${{ secrets.SFTPGO_ADMIN_PASSWORD }}" `
+            -UsersConfigPath "../config/users.json"
