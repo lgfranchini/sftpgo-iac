@@ -2,11 +2,11 @@
   {
     "username": "sw4_rossel_user",
     "password": "Password1",
-    "home_dir": ""
+    "home_dir": "/srv/sftpgo/data/username"
   },
   {
     "username": "lfr5_rossel_user",
     "password": "Password1",
-    "home_dir": ""
+    "home_dir": "/srv/sftpgo/data/username"
   }
 ]
