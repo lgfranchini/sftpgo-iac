@@ -1,12 +1,12 @@
 [
   {
-    "username": "test4_rossel_user",
+    "username": "sw_rossel_user",
     "password": "Password1",
-    "home_dir": "/srv/sftpgo/data/test4_rossel_user"
+    "home_dir": "/srv/sftpgo/data/sw_rossel_user"
   },
   {
-    "username": "test5_rossel_user",
+    "username": "lfr_rossel_user",
     "password": "Password2",
-    "home_dir": "/srv/sftpgo/data/test5_rossel_user"
+    "home_dir": "/srv/sftpgo/data/lfr_rossel_user"
   }
 ]
