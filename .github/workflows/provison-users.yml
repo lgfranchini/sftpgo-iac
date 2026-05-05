@@ -14,8 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install PowerShell
-        uses: PowerShell/PowerShell-For-GitHub-Actions@v1
+      #- name: Install PowerShell
+      #  uses: PowerShell/PowerShell-For-GitHub-Actions@v1
 
       - name: Run Provision Script
         shell: pwsh
