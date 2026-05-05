@@ -37,7 +37,7 @@ function Get-SFTPGoToken {
     # ------------------------------------------------------------
     # Construction de l'en-tête Basic Auth
     # ------------------------------------------------------------
-    $pair = "$AdminUser:$AdminPassword"
+    $pair = "${AdminUser}:${AdminPassword}"
 
     $base64 = [Convert]::ToBase64String(
         [Text.Encoding]::ASCII.GetBytes($pair)
