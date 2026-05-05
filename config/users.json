@@ -2,7 +2,7 @@
   {
     "username": "sw1_rossel_user",
     "password": "Password1",
-    "home_dir": "/srv/sftpgo/data/%username%"
+    "home_dir": "/srv/sftpgo/data/sw1_rossel_user"
   },
   {
     "username": "lfr2_rossel_user",
