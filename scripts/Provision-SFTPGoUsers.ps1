@@ -16,6 +16,15 @@ $TOKEN = Get-SFTPGoToken -Endpoint $Endpoint -AdminUser $AdminUser -AdminPasswor
 $users = Get-Content -Path $UsersConfigPath | ConvertFrom-Json
 
 foreach ($user in $users) {
+    
+     # Si home_dir contient %username%, on remplace automatiquement
+    $homeDir = $user.home_dir -replace "%username%", $user.username
+
+    # Si home_dir est vide, on le génère automatiquement
+    if ([string]::IsNullOrWhiteSpace($homeDir)) {
+        $homeDir = "/srv/sftpgo/data/$($user.username)"
+    }
+
     New-SFTPGoUser `
         -Endpoint $Endpoint `
         -Token $TOKEN `
